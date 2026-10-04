@@ -1,4 +1,4 @@
-bool cekBatasPinjam(int jumlahDipinjam) { //pnjam buku cuma mentok 3
+bool cekBatasPinjam(int jumlahDipinjam) { //peminjaman buku cuma mentok 3
   return jumlahDipinjam <= 3;
 }
 
@@ -6,7 +6,7 @@ bool cekKetersediaan(bool sedangDipinjam) { //digunain pas buku yg sedang di pnj
   return !sedangDipinjam;
 }
 
-int hitungDenda(int hariTerlambat) { //ini buat menghitung denda 1k per hari
+int hitungDenda(int hariTerlambat) { //ini buat menghitung denda 1k per hari ny
   if (hariTerlambat <= 0) return 0;
   return hariTerlambat * 1000;
 }
