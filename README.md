@@ -2,8 +2,6 @@
 
 **nama**: rafa fathur rohman(1124160130) 
 
-## bagian a — dokumen analisis
-
 ### 1. problem statement
 sistem perpus ini butuh fitur otomatis buat cek aturan peminjaman buku sama ngitung denda kalau telat sistem ni harus mastiin anggota ga boleh pinjem lebih dari 3 buku dan mencegah pinjem buku yang lagi dipinjem sama mahasiswa lain program ini langsung ngitung denda telat 1k per hari
 
@@ -20,20 +18,20 @@ sistem perpus ini butuh fitur otomatis buat cek aturan peminjaman buku sama ngit
   * total denda keterlambatan (`int`)
 
 ### 4. functional requirement
-* sistem dapat mengecek batas maksimal buku yang dipinjam
-* sistem dapat mengecek ketersediaan buku
-* sistem dapat memproses peminjaman dan mengembalikan pesan status
-* sistem dapat menghitung denda keterlambatan pengembalian
+* **fr-01**: sistem dapat mengecek batas maksimal buku yang dipinjam
+* **fr-02**: sistem dapat mengecek ketersediaan buku
+* **fr-03**: sistem dapat memproses peminjaman dan mengembalikan pesan status
+* **fr-04**: sistem dapat menghitung denda keterlambatan pengembalian
 
 ### 5. bisnis rule
-* maksimal pinjam **3 buku**
-* buku yang **sedang dipinjam** tidak bisa dipinjam lagi
-* denda keterlambatan adalah **1k per hari**
+* **br-01**: maksimal pinjam **3 buku**
+* **br-02**: buku yang **sedang dipinjam** tidak bisa dipinjam lagi
+* **br-03**: denda keterlambatan adalah **1k per hari**
 
 ### 6. decomposition
-* `cekbataspinjam(jumlahdipinjam)`: mengecek apakah `jumlahdipinjam <= 3` 
-* `cekketersediaan(sedangdipinjam)`: mengecek ketersediaan buku `!sedangdipinjam`
-* `hitungdenda(hariterlambat)`: menghitung denda `hariterlambat * 1000`
+* `cekbataspinjam(jumlahdipinjam)`: mengecek apakah `jumlahdipinjam <= 3` (br-01)
+* `cekketersediaan(sedangdipinjam)`: mengecek ketersediaan buku `!sedangdipinjam` (br-02)
+* `hitungdenda(hariterlambat)`: menghitung denda `hariterlambat * 1000` (br-03)
 * `pinjambuku(jumlahdipinjam, sedangdipinjam)`: gabungin validasi br-01 dan br-02 untuk menentukan pesan status peminjaman
 
 ### 7. pattern recognition
