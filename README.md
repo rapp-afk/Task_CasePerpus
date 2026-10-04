@@ -19,7 +19,6 @@ output :
 * total denda keterlambatan (`int`)
 
 ## functional requirements (kebutuhan fungsional)
-fungsi utama dalam sistem ini :
 * dapat mengecek batas maksimal buku yang dipinjam
 * dapat mengecek ketersediaan buku
 * dapat memproses peminjaman dan mengembalikan pesan status
@@ -41,10 +40,9 @@ fungsi utama dalam sistem ini :
         └── pinjambuku      → menggabungkan validasi br-01 dan br-02 untuk menentukan pesan status peminjaman
 
 ## pattern recognition (pengenalan pola)
-dalam sistem perpus ini kemungkinan ada beberapa pola :
 * **aturan kuota** : pola pembatasan jumlah maksimal peminjaman seperti batas item checkout pada aplikasi belanja
-* **status availability** : pola perkondisian menggunakan boolean (`true`/`false`) seperti ketersediaan kursi di bioskop
-* **perhitungan linear** : pola perhitungan denda harian menggunakan perkalian linear `(hari * tarif)`
+* **status availability** : pola perkondisian menggunakan boolean (`true`/`false`) kita ambil contoh aja kyak ketersediaan kursi di bioskop
+* **perhitungan linear** : pola perhitungan denda harian ni make perkalian linear `(hari * tarif)`
 
 ## abstraction (penyederhanaan)
     perpus
@@ -52,7 +50,7 @@ dalam sistem perpus ini kemungkinan ada beberapa pola :
         ├── sedangdipinjam
         └── hariterlambat
 
-tipe data utama yang digunakan :
+tipe data utama ny :
 * `int` : untuk jumlah buku dipinjam dan hari keterlambatan
 * `bool` : untuk status ketersediaan buku
 * `string` : untuk pesan hasil peminjaman
